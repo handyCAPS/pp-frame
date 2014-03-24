@@ -1,0 +1,27 @@
+
+// Colors
+
+$black: #222;
+$white: #FFF;
+
+$danger-color: #e74c3c;
+$succes-color: #2ecc71;
+
+$lightGrey: #ecf0f1;
+$midGrey  : darken($lightGrey, 8);
+$darkGrey : darken($lightGrey, 16);
+$lightBlue: #3498db;
+$hardBlue : #2980b9;
+
+$button-color: $hardBlue;
+
+// Fonts
+
+$body-font: sans-serif;
+
+$base-font-size: 16px;
+
+
+// Spacing
+
+$base-spacing-unit: 24px;

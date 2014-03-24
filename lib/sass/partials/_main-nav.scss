@@ -1,0 +1,35 @@
+
+
+.main-nav {
+	@extend .cf;
+	background-color: $black;
+	ul {
+		float: right;
+		display: inline-block;
+		position: relative;
+			ul {
+				float: none;
+				display: none;
+				position: absolute;
+				top: 100%;
+				background-color: $black;
+					li {
+						float: none;
+					}
+			}
+	}
+	li {
+		float: left;
+		transition: 0.3s;
+			&:hover > ul {
+				display: block;
+			}
+			&:hover {
+				background-color: lighten($black, 20);
+			}
+	}
+	a {
+		color: $white;
+		padding: 0.618em 1em;
+	}
+}

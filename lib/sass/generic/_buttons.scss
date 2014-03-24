@@ -1,0 +1,41 @@
+
+
+.button {
+	display: inline-block;
+	background-color: $button-color;
+	border: none;
+	padding: 0.618em 1.21em;
+	color: $white;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: 0.3s;
+	text-align: center;
+	min-width: 4.6em;
+		&:hover {
+			background-color: darken($button-color, 16);
+		}
+		&.small {
+			padding: 0.313em 0.618em;
+		}
+		&.large {
+			min-width: 8.6em;
+			font-size: 1.618em;
+		}
+		&.danger {
+			background-color: $danger-color;
+				&:hover {
+					background-color: saturate($danger-color, 26);
+					box-shadow: 0px 0px 3px $black;
+				}
+		}
+		&.succes {
+			background-color: $succes-color;
+				&:hover {
+					background-color: darken($succes-color, 16);
+				}
+		}
+}
+
+.button-wrap {
+	display: inline-block;
+}
