@@ -13,6 +13,11 @@ body {
 	font-size: $base-font-size;
 }
 
-#bodyWrap {
+.body-wrap {
 	padding: $base-spacing-unit;
+}
+
+a {
+	text-decoration: none;
+	color: $hardBlue;
 }

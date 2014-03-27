@@ -5,17 +5,22 @@
 	background-color: $button-color;
 	border: none;
 	padding: 0.618em 1.21em;
+	margin: 0 0.618rem 0.618rem 0;
 	color: $white;
 	vertical-align: middle;
 	cursor: pointer;
 	transition: 0.3s;
 	text-align: center;
 	min-width: 4.6em;
+		a {
+			color: $button-link-color;
+		}
 		&:hover {
 			background-color: darken($button-color, 16);
 		}
 		&.small {
-			padding: 0.313em 0.618em;
+			padding: 0.313rem 0.618rem;
+			font-size: 0.818em;
 		}
 		&.large {
 			min-width: 8.6em;

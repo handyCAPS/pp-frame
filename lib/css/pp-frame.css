@@ -1,4 +1,4 @@
-/*! pp-framework - v0.1.0 - 2014-03-23
+/*! pp-framework - v0.1.0 - 2014-03-26
 * Copyright (c) 2014 ; Licensed  */
 
 /*---------------------*\
@@ -431,6 +431,7 @@ $CLEARFIX
   background-color: #2980b9;
   border: none;
   padding: 0.618em 1.21em;
+  margin: 0 0.618rem 0.618rem 0;
   color: white;
   vertical-align: middle;
   cursor: pointer;
@@ -438,32 +439,36 @@ $CLEARFIX
   transition: 0.3s;
   text-align: center;
   min-width: 4.6em; }
-  /* line 14, ../sass/generic/_buttons.scss */
+  /* line 15, ../sass/generic/_buttons.scss */
+  .button a {
+    color: #ecf0f1; }
+  /* line 18, ../sass/generic/_buttons.scss */
   .button:hover {
     background-color: #1a5276; }
-  /* line 17, ../sass/generic/_buttons.scss */
+  /* line 21, ../sass/generic/_buttons.scss */
   .button.small {
-    padding: 0.313em 0.618em; }
-  /* line 20, ../sass/generic/_buttons.scss */
+    padding: 0.313rem 0.618rem;
+    font-size: 0.818em; }
+  /* line 25, ../sass/generic/_buttons.scss */
   .button.large {
     min-width: 8.6em;
     font-size: 1.618em; }
-  /* line 24, ../sass/generic/_buttons.scss */
+  /* line 29, ../sass/generic/_buttons.scss */
   .button.danger {
     background-color: #e74c3c; }
-    /* line 26, ../sass/generic/_buttons.scss */
+    /* line 31, ../sass/generic/_buttons.scss */
     .button.danger:hover {
       background-color: #ff3824;
       -webkit-box-shadow: 0px 0px 3px #222222;
       box-shadow: 0px 0px 3px #222222; }
-  /* line 31, ../sass/generic/_buttons.scss */
+  /* line 36, ../sass/generic/_buttons.scss */
   .button.succes {
     background-color: #2ecc71; }
-    /* line 33, ../sass/generic/_buttons.scss */
+    /* line 38, ../sass/generic/_buttons.scss */
     .button.succes:hover {
       background-color: #1f894c; }
 
-/* line 39, ../sass/generic/_buttons.scss */
+/* line 44, ../sass/generic/_buttons.scss */
 .button-wrap {
   display: inline-block; }
 
@@ -499,12 +504,17 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
 /* line 16, ../sass/partials/_toplevel.scss */
-#bodyWrap {
+.body-wrap {
   padding: 24px; }
+
+/* line 20, ../sass/partials/_toplevel.scss */
+a {
+  text-decoration: none;
+  color: #2980b9; }
 
 /* line 3, ../sass/partials/_main-nav.scss */
 .main-nav {
@@ -611,3 +621,47 @@ input[type='submit'] {
   padding: 0 !important;
   margin: 8px;
   margin-right: 1em; }
+
+/* line 3, ../sass/partials/_table.scss */
+table {
+  border-collapse: collapse; }
+  /* line 5, ../sass/partials/_table.scss */
+  table .button {
+    vertical-align: baseline; }
+
+/* line 10, ../sass/partials/_table.scss */
+tr {
+  border-bottom: 1px solid #d5dde0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  /* line 21, ../sass/partials/_table.scss */
+  tr:last-of-type {
+    border-bottom: none; }
+  /* line 24, ../sass/partials/_table.scss */
+  tr:hover {
+    background-color: #d5dde0; }
+  /* line 27, ../sass/partials/_table.scss */
+  tr.meta {
+    background-color: #ecf0f1; }
+    /* line 29, ../sass/partials/_table.scss */
+    tr.meta td {
+      padding: 0.142rem 0.618rem; }
+    /* line 32, ../sass/partials/_table.scss */
+    tr.meta:hover {
+      background-color: #ecf0f1; }
+
+/* line 39, ../sass/partials/_table.scss */
+thead tr {
+  background-color: #d5dde0; }
+
+/* line 44, ../sass/partials/_table.scss */
+th {
+  padding: 0.142rem 0.618rem;
+  text-align: left; }
+  /* line 48, ../sass/partials/_table.scss */
+  th a:hover {
+    text-decoration: underline; }
+
+/* line 54, ../sass/partials/_table.scss */
+td {
+  padding: 0.618em; }

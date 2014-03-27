@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>PrinterPlaza</title>
+
+	<!-- Font Awesome  -->
+	<!-- <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.min.css"> -->
+	<!-- jQuery UI -->
+	<!-- <link rel="stylesheet" type="text/css" href="/stylesheets/jquery-ui-1.10.3.custom.min.css"> -->
+	<!-- Foundation and Printer Plaza -->
+	<link rel="stylesheet" href="lib/css/pp-frame.dev.css">
+
+	<!-- Foundation Javascript  -->
+  	<script src="lib/js/vendor/jquery1.11.min.js"></script>
+
+  	<!-- jQuery UI  -->
+  <!--	<script type="text/javascript" src="/js/vendor/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="/js/plaza.js"></script> -->
+</head>
+<body class="">
+<div id="outerWrap">
+	<header>
+		<nav class="main-nav">
+			<!-- <section class="top-bar-section"> -->
+				<ul class="right">
+					<li><a href="/">Home</a></li>
+
+						<li class="has-dropdown">
+		<a href="#">P & O</a>
+
+
+		<ul class="dropdown">
+										<li><a href="/Organization/List">Organisatie</a></li>
+							<li><a href="/Person/List">Contactpersonen</a></li>
+					</ul>
+
+	</li>
+	<li class="has-dropdown">
+		<a href="#">Producten</a>
+
+
+		<ul class="dropdown">
+										<li><a href="/Article/List">Artikelen</a></li>
+							<li><a href="/ArticleStatus/List">Artikel Status</a></li>
+					</ul>
+
+	</li>
+	<li class="has-dropdown">
+		<a href="#">Order</a>
+
+
+		<ul class="dropdown">
+										<li><a href="/SalesOrder/List">Verkoop Order</a></li>
+							<li><a href="/PickingList/List">Pakbon</a></li>
+							<li><a href="/PaymentMethod/List">Betalings Methoden</a></li>
+							<li><a href="/SalesOrderType/List">Verkoop Order Type</a></li>
+					</ul>
+
+	</li>
+	<li class="has-dropdown">
+		<a href="#">Magazijn</a>
+
+
+		<ul class="dropdown">
+										<li><a href="/Stock/List">Voorraad</a></li>
+							<li><a href="/StockLocation/List">Magazijn Locatie</a></li>
+							<li><a href="/BarcodeStock/List">Barcode Scans</a></li>
+							<li><a href="/BarcodePrinter/List">Label Printer</a></li>
+							<li><a href="/LogBarcodeScan/List">Log Barcode Scan</a></li>
+					</ul>
+
+	</li>
+	<li class="has-dropdown">
+		<a href="#">Beheer</a>
+
+
+		<ul class="dropdown">
+										<li><a href="/Menu/List">Menu</a></li>
+							<li><a href="/Label/List">Label</a></li>
+							<li><a href="#">ObjectModel</a></li>
+							<li><a href="/UserAccount/List">User Accounts</a></li>
+							<li><a href="/VatRate/List">BTW Tarieven</a></li>
+					</ul>
+
+	</li>
+
+
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			<!-- </section> -->
+		</nav>
+	</header>
+	<div id="contentWrap" class="row">
+
+
+<div id="stocWrap" class="row body-wrap">
+
+	<h1 class="large-12 columns">Voorraad lijst</h1>
+
+	<div id="tableWrap" class="large-8 columns left">
+
+		<div id="formNavWrap" class="">
+
+			<div class="button">
+				<a href="/Stock/Form/createnew">Nieuw</a>
+			</div>
+
+			<div class="button">
+				<a href="/Stock/List/reserve">Reserveer</a>
+			</div>
+
+		</div><!--  end formNavWrap  -->
+
+		<div id="paginationWrapTop" class="">
+
+<script  type="text/javascript">
+function sendToPage(e, field) {
+	if(e && e.keyCode == 13) {
+		var link = "/Stock/List/gotoPage/".concat(field.value);
+		document.forms["paginationPageForm"].action=link;
+	}
+}
+</script>
+
+
+<div class="pagination wrap">
+	<ul class="left">
+		<li class="pagination_link first active"><a href="/Stock/List/First">First</a></li>
+		<li class="pagination_link previous active"><a href="/Stock/List/Previous">Previous</a></li>
+
+						<li class="pagination_link active"><a href="/Stock/List/gotoPage/1">1</a></li>
+		<li class="pagination_link next active"><a href="/Stock/List/Next">Next</a></li>
+		<li class="pagination_link last active"><a href="/Stock/List/Last">Last</a></li>
+		<li class="pagination_link active"><a href="#">Pages 1/1</a></li>
+		<li class="pagination_link active"><a href="#">Total 2</a></li>
+    	<form id="paginationPageForm">
+			<li><input type="number" class="pagination_link" value="1" onkeypress="sendToPage(event, this)"></li>
+		</form>
+	</ul>
+</div>
+		</div><!--  end paginationWrapTop  -->
+
+<table id="stoc" rules='rows'>
+	<thead>
+		<form id="search" action="/Stock/List">
+	<tr class="meta">
+		<td>Artikel</td>
+		<td colspan="2">
+			<input type="text"
+			       class="input-search"
+		    	   id="arse_serialnumber"
+			       name="arse_serialnumber"
+			       value=""
+			       placeholder="Serienummer">
+		</td>
+		<td>
+			<input type="text"
+			       class="input-search"
+			       id="arti_number"
+			       name="arti_number"
+			       value=""
+			       placeholder="Artikelnummer ...">
+		</td>
+		<td>
+			<input type="text"
+			       class="input-search"
+			       id="arti_ean"
+			       name="arti_ean"
+			       value=""
+			       placeholder="EAN ...">
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr class="meta">
+		<td>
+			<input type="submit" id="searchButton" name="searchButton" class="button search_button small" value="Zoek">
+		</td>
+		<td>
+			<input type="text"
+			       id="arti_name"
+			       class="input-search"
+			       name="arti_name"
+			       value=""
+			       placeholder="Omschrijving ...">
+		</td>
+		<td>
+			<input type="text"
+			       id="stoc_amount"
+			       name="stoc_amount"
+			       value=""
+			       placeholder="Aantal ...">
+		</td>
+		<td>
+			<input type="text"
+			       id="stoc_free"
+			       name="stoc_free"
+			       value=""
+			       placeholder="Vrij ...">
+		</td>
+		<td>
+			<input type="text"
+			       id="stoc_backorder"
+			       name="stoc_backorder"
+			       value=""
+			       placeholder="Backorder ...">
+		</td>
+		<td>
+			<input type="text"
+			       id="stoc_reserved"
+			       name="stoc_reserved"
+			       value=""
+			       placeholder="Gereserveerd ...">
+		</td>
+		<td>
+			<input type="submit"
+			       id="resetButton"
+			       name="resetButton"
+			       class="button search_button small"
+			       value="Reset"
+			       formaction="/Stock/List/resetSearch">
+		</td>
+	</tr>
+</form>
+
+		<tr class="sortColumn">
+			<th><input type="checkbox" value="" class="checkAll" onclick="checkAll('stoc')"></th>
+			<th><a name="arti_name" href="#">Artikel</a></th>
+			<th><a name="stoc_amount" href="#">Aantal</a></th>
+			<th><a name="stoc_free" href="#">Vrij</a></th>
+			<th><a name="stoc_backorder" href="#">Backorder</a></th>
+			<th><a name="stoc_reserved" href="#">Gereserveerd</a></th>
+			<th>Bewerk</th>
+		</tr>
+	</thead>
+	<tbody>
+					<tr id="stoc265">
+				<td><input type="checkbox" value="" class="checkOne"></td>
+				<td>Artikel 1 Een</td>
+				<td>11</td>
+				<td>9</td>
+				<td></td>
+				<td>2</td>
+				<td class="center edit-icon"><a href="/Stock/Form/get/265"><i class="fa fa-edit"></i></a></td>
+			</tr>
+					<tr id="stoc266">
+				<td><input type="checkbox" value="" class="checkOne"></td>
+				<td>Artikel 2 Twee</td>
+				<td>7</td>
+				<td>3</td>
+				<td></td>
+				<td>4</td>
+				<td class="center edit-icon"><a href="/Stock/Form/get/266"><i class="fa fa-edit"></i></a></td>
+			</tr>
+			</tbody>
+</table>
+		<div id="paginationWrapBottom" class="">
+
+<script  type="text/javascript">
+function sendToPage(e, field) {
+	if(e && e.keyCode == 13) {
+		var link = "/Stock/List/gotoPage/".concat(field.value);
+		document.forms["paginationPageForm"].action=link;
+	}
+}
+</script>
+
+
+<div class="pagination wrap">
+	<ul class="left">
+		<li class="pagination_link first active"><a href="/Stock/List/First">First</a></li>
+		<li class="pagination_link previous active"><a href="/Stock/List/Previous">Previous</a></li>
+
+						<li class="pagination_link active"><a href="/Stock/List/gotoPage/1">1</a></li>
+		<li class="pagination_link next active"><a href="/Stock/List/Next">Next</a></li>
+		<li class="pagination_link last active"><a href="/Stock/List/Last">Last</a></li>
+		<li class="pagination_link active"><a href="#">Pages 1/1</a></li>
+		<li class="pagination_link active"><a href="#">Total 2</a></li>
+    	<form id="paginationPageForm">
+			<li><input type="number" class="pagination_link" value="1" onkeypress="sendToPage(event, this)"></li>
+		</form>
+	</ul>
+</div>
+		</div><!--  end paginationWrapTop  -->
+	</div><!--  end tableWrap  -->
+</div><!--  end stocWrap  -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		/* Add clickable column sort */
+		$(".sortColumn th a[href]").click(function() {
+			var fieldName = $(this).prop('name');
+			var fieldClass = $(this).prop('class');
+			if (typeof fieldName === "undefined" ||
+					   fieldName == "") {
+				//Error no fieldname defined
+			} else {
+				$(".fa-chevron-down, .fa-chevron-up").each(function(i, el) {
+					$(el).removeClass("fa-chevron-down fa-chevron-up");
+				});
+				if (typeof fieldClass === "undefined"||
+						   fieldClass == "") {
+					$(this).addClass("fa fa-chevron-up");
+					$(this).prop('href',"/Stock/List/Sort/"+fieldName+" asc")
+				} else if (fieldClass == "fa fa-chevron-down") {
+					$(this).addClass("fa fa-chevron-up");
+					$(this).prop('href',"/Stock/List/Sort/"+fieldName+" asc")
+				} else if (fieldClass == "fa fa-chevron-up") {
+					$(this).addClass("fa fa-chevron-down");
+					$(this).prop('href',"/Stock/List/Sort/"+fieldName+" desc")
+				}
+			}
+		});
+	});
+
+	function setSortColumn(sorting) {
+		//Split on space
+		var valueArray = sorting.split(" ");
+		if (valueArray.length == 1) {
+			//No asc or desc set for current orderby, default is asc
+			valueArray[1] = "asc";
+		}
+		if (valueArray[0] === "undefined") {
+			//No sorting defined
+		} else if (valueArray[1] === "undefined" ||
+				   valueArray[1] == "" ||
+				   valueArray[1] == "asc" ) {
+			//Set up arrow
+			$(".sortColumn th a[name="+valueArray[0]+"]").addClass("fa fa-chevron-up");
+		} else {
+			//Set down arrow
+			$(".sortColumn th a[name="+valueArray[0]+"]").addClass("fa fa-chevron-down");
+		}
+	}
+</script>
+
+	</div><!--  end content  -->
+</div><!--  end outerWrap  -->
+
+  	<!-- Printer Plaza Javascript -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		//Add autocomple to all input fields with class "input_search"
+		$(".input-search").each(function(i, val) {
+			var fieldName = $(this).attr('name');
+			$(this).autocomplete({
+				source: function(request, response) {
+            		$.ajax({
+                		url: '/inc/autocomplete.php',
+	                	dataType: "json",
+	    	            data: {
+    	    	            term : request.term,
+        		            field: fieldName
+            		    },
+                		success: function(data) {
+                    		response(data);
+		                }
+    		        });
+        		},
+        		minLength: 2,
+				select: function(event, ui) {
+    	    		if(ui.item){
+        	    		$(event.target).val(ui.item.value);
+        	    		//Check for auto complete on input field with id field
+        	    		var searchName = $(event.target).attr("id");
+        	    		var searchID   = searchName + "_id";
+        	    		var idField = $("input[id="+searchID+"]");
+        	    		if (typeof(idField) != "undefined") {
+	        	    		idField.val(ui.item.id);
+        	    		}
+        			}
+        			$('#search').submit();
+				}
+			});
+		});
+
+		//Initialise tinemce
+		tinymce.init({
+			selector: '.ppmce'
+		});
+
+		/**
+		 * Set indication on column that is used to sort a list.
+		 * The parameter is set while defining smarty variables.
+		 */
+		setSortColumn("");
+
+		// Set the update fields in article list table header to not displayed
+		$("#updateFields").hide();
+
+	});
+
+
+	/*
+	 * In a table with records only one record can have a default
+	 * indication. Browse through all records and set the default
+	 * value to unchecked for all other records.
+	 * Then do an ajax call to change the database.
+	 * Example: Default supplier for an article
+     */
+	function setDefault(cb, fk_id, rec_id) {
+        var fieldName   = $(cb).attr('id');
+		var tableName   = $(cb).closest('table').attr('id');
+		var rowName     = $(cb).closest('tr').attr('id');
+
+		//alert("Clicked: " + cb.checked + ", Table: "+ tableName + ", rowName: " + rowName);
+		//Browse through records and uncheck defaults for other records
+		$('#'+tableName+' tbody tr').each(function(i1, val1){
+			var currentRow = $(val1).attr('id');
+			if ( currentRow != rowName) {
+				$(this).find('#'+fieldName).each(function(i2, val2) {
+					$(val2).prop('checked', false);
+				});
+			}
+		});
+		//Do ajax call to update the database
+		$.ajax({
+		    url : "/inc/setdefault.php",
+		    data : {
+			    field: fieldName,
+			    fk_id: fk_id,
+			    rec_id: rec_id
+			}
+		});
+
+		//For table arti_suar_table recalculate price
+		if (tableName == "suar") {
+			updatePrice("sd", 0);
+		}
+	};
+
+	/*
+	 * Started from search template ((*)_search.tpl) to clear search
+	 * values from the search fields.
+	 * This is followed by form submit() by default
+	 *
+	 * CAUTION:
+     * 	Does not work for checkboxes and redio buttons
+	 */
+	function resetForm(formName) {
+//		alert("resetForm: " + formName);
+		$('#'+formName).find('input:text, input:password, input:file, select, textarea').val('');
+	}
+
+	/*
+	 * When the checkbox in the header of a list view is checked this function
+	 * is triggered. It will set all checkboxes of table records to "checked".
+	 *
+	 */
+	function checkAll(tableName) {
+		var cbValue = $('.checkAll').prop('checked');
+//		alert("checkAll: " + tableName + ", Value: " + cbValue);
+		$('#'+tableName+' tbody tr').each(function(i, el) {
+			$(el).find('.checkOne').prop('checked', cbValue);
+		});
+	}
+
+	/**
+	 * This function addsa an sort indication to the column of
+	 * a table. arrow up is ascending, arrow down is descending.
+	 */
+	function setSortColumn(sorting) {
+		//Split on space
+		var valueArray = sorting.split(" ");
+		if (valueArray.length == 1) {
+			//No asc or desc set for current orderby, default is asc
+			valueArray[1] = "asc";
+		}
+		if (valueArray[0] === "undefined") {
+			//No sorting defined
+		} else if (valueArray[1] === "undefined" ||
+				   valueArray[1] == "" ||
+				   valueArray[1] == "asc" ) {
+			//Set up arrow
+			$(".sortColumn th a[name="+valueArray[0]+"]").addClass("fa fa-chevron-up");
+		} else {
+			//Set down arrow
+			$(".sortColumn th a[name="+valueArray[0]+"]").addClass("fa fa-chevron-down");
+		}
+	}
+
+	/**
+	 * This function is started when in the article list view the "show update"
+	 * or "hide" is clicked. It toggles visibility of the update fields in the
+	 * header of the list table for articles.
+	 */
+	function toggleUpdate(action) {
+		if (action == "expand") {
+			document.getElementById("updateFields").style.display = "";
+			document.getElementById("expandUpdate").style.display = "none";
+		} else {
+			document.getElementById("updateFields").style.display = "none";
+			document.getElementById("expandUpdate").style.display = "";
+		}
+	}
+
+	/**
+	 * This function is started when one of the fields is changed that
+	 * causes a recalculation of the "calculated price" for articles.
+	 * sd: Default Supplier changed
+	 * sp: arti_selling_price changed (fixed price)
+	 * em: arti_euro_margin changed
+	 * pm: arti_percentage_margin changed
+	 */
+	function updatePrice(fld, vl) {
+		var updateType = fld;
+		var typeValue = parseFloat(vl);
+		var newprice = 0; //Start with 0 newPrice.
+		if (fld == "sd") {
+			//Default supplier changed, new purchase price
+			var mp = $('input[name="arti_percentage_margin"]').val();
+			var me = $('input[name="arti_euro_margin"]').val();
+			var sp = $('input[name="arti_selling_price"]').val();
+			mp = parseFloat(mp);
+			me = parseFloat(me);
+			sp = parseFloat(sp);
+			if (!isNaN(mp) && mp != "" && mp >= 0) {
+				updateType = "pm";
+				typeValue  = mp;
+			} else if (!isNaN(me) && me != "" && me > 0) {
+				updateType = "em";
+				typeValue  = me;
+			} else if (!isNaN(sp) && sp != "" && sp > 0) {
+				updateType = "sp";
+				typeValue  = sp;
+			}
+		} else {
+			if (isNaN(typeValue)) {
+				typeValue = 0; //Assure we have a value typeValue
+			}
+		}
+		if (updateType == "sp" && typeValue != "" && typeValue >= 0) {
+			//Fixced Selling Price
+			$('input[name="arti_percentage_margin"]').val("");
+			$('input[name="arti_euro_margin"]').val("");
+			newprice = typeValue;
+		} else {
+	        var purchase = getPurchasePrice();
+			if (updateType == "pm" && typeValue != "" && typeValue >= 0 ) {
+				//Percentage Margin
+				$('input[name="arti_selling_price"]').val("");
+				$('input[name="arti_euro_margin"]').val("");
+				newprice = purchase * (1 + (typeValue/100));
+			} else if (updateType == "em" && typeValue != "" && typeValue >= 0 ) {
+				//Euro Margin
+				$('input[name="arti_selling_price"]').val("");
+				$('input[name="arti_percentage_margin"]').val("");
+				newprice = purchase + typeValue;
+			}
+		}
+		if (newprice > 0) {
+			//A new price has been set. So set ui price
+			$('input[name="arti_calculated_price"]').val(newprice.toFixed(2));
+		} else {
+			//Empty ui price
+			$('input[name="arti_calculated_price"]').val("");
+		}
+	}
+
+	/**
+	 * When "euro margin" or "percentage margin" in an article is changed.
+	 * the purchase price of the default supplier is required to calculate
+	 * a new selling price. This function finds the default supplier and its
+	 * purchase price.
+	 */
+	function getPurchasePrice() {
+		var returnPrice = "";
+		$('table#suar tbody tr').each(function(i1, val1){
+			var def = $(val1).find('#suar_default');
+			var price = $(val1).find('#suar_purchase_price');
+			if ($(def).prop('checked') ) {
+				returnPrice = $(price).html();
+			}
+		});
+		return parseFloat(returnPrice);
+	}
+
+	function updateList() {
+		var lpPrice      = $('input[name="arti_list_price"]').val();
+		var lpPercentage = $('input[name="arti_list_price_percentage"]').val();
+		lpPrice = parseFloat(lpPrice);
+		lpPercentage = parseFloat(lpPercentage);
+		if (isNaN(lpPrice)) {
+			lpPrice = 0;
+		}
+		if (isNaN(lpPercentage)) {
+			lpPercentage = 0;
+		}
+		var lpSelling    = lpPrice * (1 - (lpPercentage/100));
+		$('input[name="arti_minimum_price"]').val(lpSelling);
+	}
+
+</script>
+</body>
+</html>

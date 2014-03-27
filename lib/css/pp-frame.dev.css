@@ -1,4 +1,4 @@
-/*! pp-framework - v0.1.0 - 2014-03-23
+/*! pp-framework - v0.1.0 - 2014-03-26
 * Copyright (c) 2014 ; Licensed  */
 
 /*---------------------*\
@@ -474,6 +474,7 @@ $CLEARFIX
   background-color: #2980b9;
   border: none;
   padding: 0.618em 1.21em;
+  margin: 0 0.618rem 0.618rem 0;
   color: white;
   vertical-align: middle;
   cursor: pointer;
@@ -482,39 +483,44 @@ $CLEARFIX
   text-align: center;
   min-width: 4.6em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000315}}
+.button a {
+  color: #ecf0f1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000318}}
 .button:hover {
   background-color: #1a5276;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000321}}
 .button.small {
-  padding: 0.313em 0.618em;
+  padding: 0.313rem 0.618rem;
+  font-size: 0.818em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000325}}
 .button.large {
   min-width: 8.6em;
   font-size: 1.618em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000329}}
 .button.danger {
   background-color: #e74c3c;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000331}}
 .button.danger:hover {
   background-color: #ff3824;
   -webkit-box-shadow: 0px 0px 3px #222222;
   box-shadow: 0px 0px 3px #222222;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000336}}
 .button.succes {
   background-color: #2ecc71;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000338}}
 .button.succes:hover {
   background-color: #1f894c;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_buttons\.scss}line{font-family:\0000344}}
 .button-wrap {
   display: inline-block;
 }
@@ -556,13 +562,19 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_toplevel\.scss}line{font-family:\0000316}}
-#bodyWrap {
+.body-wrap {
   padding: 24px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_toplevel\.scss}line{font-family:\0000320}}
+a {
+  text-decoration: none;
+  color: #2980b9;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_main-nav\.scss}line{font-family:\000033}}
@@ -691,4 +703,60 @@ input[type='submit'] {
   padding: 0 !important;
   margin: 8px;
   margin-right: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\000033}}
+table {
+  border-collapse: collapse;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\000035}}
+table .button {
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000310}}
+tr {
+  border-bottom: 1px solid #d5dde0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000321}}
+tr:last-of-type {
+  border-bottom: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000324}}
+tr:hover {
+  background-color: #d5dde0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000327}}
+tr.meta {
+  background-color: #ecf0f1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000329}}
+tr.meta td {
+  padding: 0.142rem 0.618rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000332}}
+tr.meta:hover {
+  background-color: #ecf0f1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000339}}
+thead tr {
+  background-color: #d5dde0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000344}}
+th {
+  padding: 0.142rem 0.618rem;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000348}}
+th a:hover {
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000354}}
+td {
+  padding: 0.618em;
 }
