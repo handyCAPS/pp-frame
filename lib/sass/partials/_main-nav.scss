@@ -12,14 +12,17 @@
 				display: none;
 				position: absolute;
 				top: 100%;
+				left: 0;
 				background-color: $black;
 					li {
 						float: none;
+						white-space: nowrap;
 					}
 			}
 	}
 	li {
 		float: left;
+		position: relative;
 		transition: 0.3s;
 			&:hover > ul {
 				display: block;
@@ -32,4 +35,16 @@
 		color: $white;
 		padding: 0.618em 1em;
 	}
+}
+
+.has-dropdown {
+		&:after {
+			content: '';
+			display: inline-block;
+			border: 0.25rem solid transparent;
+			border-top-color: $midGrey;
+			position: absolute;
+			top: 1rem;
+			right: 0.125rem;
+		}
 }

@@ -116,7 +116,7 @@
 
 		</div><!--  end formNavWrap  -->
 
-		<div id="paginationWrapTop" class="">
+		<!-- <div id="paginationWrapTop" class=""> -->
 
 <script  type="text/javascript">
 function sendToPage(e, field) {
@@ -130,20 +130,60 @@ function sendToPage(e, field) {
 
 <div class="pagination wrap">
 	<ul class="left">
-		<li class="pagination_link first active"><a href="/Stock/List/First">First</a></li>
-		<li class="pagination_link previous active"><a href="/Stock/List/Previous">Previous</a></li>
+		<li class="pagination_link first active">
+			<a href="/Stock/List/First">First</a>
+		</li>
 
-						<li class="pagination_link active"><a href="/Stock/List/gotoPage/1">1</a></li>
-		<li class="pagination_link next active"><a href="/Stock/List/Next">Next</a></li>
-		<li class="pagination_link last active"><a href="/Stock/List/Last">Last</a></li>
-		<li class="pagination_link active"><a href="#">Pages 1/1</a></li>
-		<li class="pagination_link active"><a href="#">Total 2</a></li>
-    	<form id="paginationPageForm">
-			<li><input type="number" class="pagination_link" value="1" onkeypress="sendToPage(event, this)"></li>
+		<li class="pagination_link previous active">
+			<a href="/Stock/List/Previous">Previous</a>
+		</li>
+
+		<li class="pagination_link pagination_number">
+			<a href="/Stock/List/gotoPage/1">1</a>
+		</li>
+
+		<li class="pagination_link pagination_number active">
+			<a href="/Stock/List/gotoPage/1">2</a>
+		</li>
+
+		<li class="pagination_link pagination_number">
+			<a href="/Stock/List/gotoPage/1">3</a>
+		</li>
+
+		<li class="pagination_link pagination_number">
+			<a href="/Stock/List/gotoPage/1">4</a>
+		</li>
+
+		<li class="pagination_link pagination_number">
+			<a href="/Stock/List/gotoPage/1">5</a>
+		</li>
+
+		<li class="pagination_link next">
+			<a href="/Stock/List/Next">Next</a>
+		</li>
+
+		<li class="pagination_link last">
+			<a href="/Stock/List/Last">Last</a>
+		</li>
+
+		<li class="pagination_link">
+			<a href="#">Pages 1/1</a>
+		</li>
+
+		<li class="pagination_link">
+			<a href="#">Total 2</a>
+		</li>
+
+  	<form id="paginationPageForm">
+			<li>
+				<input type="number" class="pagination_link" value="1" onkeypress="sendToPage(event, this)">
+			</li>
 		</form>
+
 	</ul>
+
 </div>
-		</div><!--  end paginationWrapTop  -->
+		<!-- </div> end paginationWrapTop  -->
 
 <table id="stoc" rules='rows'>
 	<thead>
@@ -192,6 +232,7 @@ function sendToPage(e, field) {
 		<td>
 			<input type="text"
 			       id="stoc_amount"
+			       class="input-search"
 			       name="stoc_amount"
 			       value=""
 			       placeholder="Aantal ...">
@@ -199,6 +240,7 @@ function sendToPage(e, field) {
 		<td>
 			<input type="text"
 			       id="stoc_free"
+			       class="input-search"
 			       name="stoc_free"
 			       value=""
 			       placeholder="Vrij ...">
@@ -206,6 +248,7 @@ function sendToPage(e, field) {
 		<td>
 			<input type="text"
 			       id="stoc_backorder"
+			       class="input-search"
 			       name="stoc_backorder"
 			       value=""
 			       placeholder="Backorder ...">
@@ -213,6 +256,7 @@ function sendToPage(e, field) {
 		<td>
 			<input type="text"
 			       id="stoc_reserved"
+			       class="input-search"
 			       name="stoc_reserved"
 			       value=""
 			       placeholder="Gereserveerd ...">

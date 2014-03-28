@@ -12,14 +12,14 @@
 					<li><a href="#">Home</a></li>
 					<li><a href="?page=form">Form</a><li>
 					<li><a href="?page=table">Table</a></li>
-					<li><a href="#">Dropdown 1</a>
+					<li class="has-dropdown"><a href="#">Dropdown 1</a>
 						<ul>
 							<li><a href="#">Cool stuff</a></li>
 							<li><a href="#">Less Cool</a></li>
 							<li><a href="#">Not Cool</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Dropdown 2</a>
+					<li class="has-dropdown"><a href="#">Dropdown 2</a>
 						<ul>
 							<li><a href="#">Big</a></li>
 							<li><a href="#">Small</a></li>

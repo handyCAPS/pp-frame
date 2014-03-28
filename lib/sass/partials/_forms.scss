@@ -29,10 +29,6 @@ label, .label-div {
 	padding-right: 0.313em;
 }
 
-.label-text {
-	// margin-right: -5px;
-}
-
 input {
 	&.small {
 		width: 3.4em;
@@ -50,9 +46,9 @@ input {
 		// You need a background color for the shadow to work
 		background-color: $white;
 		padding: 3.5px 0.313em;
-		min-width: 3.4em;
+		min-width: 6.8rem;
 			&:focus {
-				box-shadow: inset 0 0 4px darken($lightGrey, 16);
+				box-shadow: inset 0 0 4px darken($lightGrey, 16), 0 0 8px 1px $lightBlue;
 			}
 	}
 	&[type='range'] {
@@ -60,6 +56,9 @@ input {
 	}
 	&[type='checkbox'] {
 		cursor: pointer;
+	}
+	&.input-search {
+		width: 100%;
 	}
 	&[type='radio'] {
 		cursor: pointer;
