@@ -1,4 +1,4 @@
-/*! pp-framework - v0.1.0 - 2014-03-27
+/*! pp-framework - v0.1.0 - 2014-03-28
 * Copyright (c) 2014 ; Licensed  */
 
 /*---------------------*\
@@ -798,12 +798,18 @@ td {
   padding: 0.25rem 0.5rem;
   margin: 0.5rem 0.25rem 0.25rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000319}}
-.pagination a {
-  display: block;
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000318}}
+.pagination li.active {
+  background-color: transparent;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000321}}
+.pagination li.active a {
+  color: #222222;
+  pointer-events: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000329}}
 li.pagination_number {
   margin: 0.25rem 0.06rem;
 }

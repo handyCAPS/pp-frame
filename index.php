@@ -2,7 +2,7 @@
 	require_once 'views/header.php';
 ?>
 
-<div id="bodyWrap">
+<div class="body-wrap">
 
 <h1>Printer Plaza Framework</h1>
 
@@ -24,7 +24,7 @@ if (isset($_REQUEST['page'])) {
  ?>
 
 
-</div><!--  end #bodyWrap  -->
+</div><!--  end .body-wrap -->
 
 <?php
 	require_once 'views/footer.php';

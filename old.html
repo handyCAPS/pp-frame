@@ -171,24 +171,24 @@ function sendToPage(e, field) {
 		</li>
 
 		<li class="pagination_link">
-			<a href="#">Total 2</a>
+	  	<form id="paginationPageForm">
+					<input type="number" class="pagination_link" value="1" onkeypress="sendToPage(event, this)">
+			</form>
 		</li>
-
-  	<form id="paginationPageForm">
-			<li>
-				<input type="number" class="pagination_link" value="1" onkeypress="sendToPage(event, this)">
-			</li>
-		</form>
 
 	</ul>
 
+			<a href="#">Total 2</a>
+
+
 </div>
+
 		<!-- </div> end paginationWrapTop  -->
 
 <table id="stoc" rules='rows'>
 	<thead>
-		<form id="search" action="/Stock/List">
 	<tr class="meta">
+		<form id="search" action="/Stock/List">
 		<td>Artikel</td>
 		<td colspan="2">
 			<input type="text"
@@ -269,8 +269,8 @@ function sendToPage(e, field) {
 			       value="Reset"
 			       formaction="/Stock/List/resetSearch">
 		</td>
+	</form>
 	</tr>
-</form>
 
 		<tr class="sortColumn">
 			<th><input type="checkbox" value="" class="checkAll" onclick="checkAll('stoc')"></th>

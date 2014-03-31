@@ -15,9 +15,14 @@
 		border: 1px solid $midGrey;
 		padding: 0.25rem 0.5rem;
 		margin: 0.5rem 0.25rem 0.25rem;
-	}
-	a {
-		display: block;
+			&.active {
+				background-color: transparent;
+				border: none;
+					a {
+						color: $black;
+						pointer-events: none;
+					}
+			}
 	}
 }
 

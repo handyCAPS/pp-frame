@@ -1,4 +1,4 @@
-/*! pp-framework - v0.1.0 - 2014-03-27
+/*! pp-framework - v0.1.0 - 2014-03-28
 * Copyright (c) 2014 ; Licensed  */
 
 /*---------------------*\
@@ -699,10 +699,15 @@ td {
   border: 1px solid #d5dde0;
   padding: 0.25rem 0.5rem;
   margin: 0.5rem 0.25rem 0.25rem; }
-/* line 19, ../sass/partials/_pagination.scss */
-.pagination a {
-  display: block; }
+  /* line 18, ../sass/partials/_pagination.scss */
+  .pagination li.active {
+    background-color: transparent;
+    border: none; }
+    /* line 21, ../sass/partials/_pagination.scss */
+    .pagination li.active a {
+      color: #222222;
+      pointer-events: none; }
 
-/* line 24, ../sass/partials/_pagination.scss */
+/* line 29, ../sass/partials/_pagination.scss */
 li.pagination_number {
   margin: 0.25rem 0.06rem; }
