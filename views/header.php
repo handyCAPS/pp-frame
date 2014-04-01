@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Printer Plaza Framework</title>
+	<link rel="stylesheet" href="lib/css/normalize.dev..css">
 	<link rel="stylesheet" type="text/css" href="lib/css/pp-frame.dev.css">
 </head>
 <body>

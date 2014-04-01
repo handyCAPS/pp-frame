@@ -83,6 +83,18 @@ module.exports = function(grunt) {
           dest: 'lib/css',
           ext: '.css'
         }]
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: [{
+          expand: true,
+          cwd: 'lib/sass',
+          src: ['**/*.scss'],
+          dest: 'dist/css',
+          ext: '.min.css'
+        }]
       }
     },
     autoprefixer: {

@@ -1,448 +1,12 @@
-/*! pp-framework - v0.1.0 - 2014-03-28
+/*! pp-framework - v0.1.0 - 2014-04-01
 * Copyright (c) 2014 ; Licensed  */
 
+@charset "CP850";
 /*---------------------*\
 
 	$FINAL-IMPORT
 
 \*---------------------*/
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\000039}}
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000319}}
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000341}}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000353}}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000363}}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000374}}
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000385}}
-a {
-  background: transparent;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\0000394}}
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003105}}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003114}}
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003122}}
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003131}}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003140}}
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003149}}
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003158}}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003165}}
-sup {
-  top: -0.5em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003169}}
-sub {
-  bottom: -0.25em;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003180}}
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003188}}
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003199}}
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003207}}
-hr {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003217}}
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003228}}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003252}}
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003262}}
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8+, and Opera
- * Correct `select` style inheritance in Firefox.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003274}}
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003289}}
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003299}}
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003308}}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003318}}
-input {
-  line-height: normal;
-}
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003331}}
-input[type="checkbox"],
-input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003343}}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003353}}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003367}}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003375}}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003386}}
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003395}}
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003404}}
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003415}}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/_normalize\.scss}line{font-family:\00003421}}
-td,
-th {
-  padding: 0;
-}
-
 /*------------------------------------*\
 $CLEARFIX
 \*------------------------------------*/
@@ -452,7 +16,7 @@ $CLEARFIX
 * and over in your markup.
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/generic\/_clearfix\.scss}line{font-family:\0000310}}
-.cf:after, .main-nav:after {
+.cf:after, .main-nav:after, .pagination:after {
   content: "";
   display: table;
   clear: both;
@@ -550,6 +114,110 @@ nav a {
   display: block;
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello/font/fontello.eot?36545615");
+  src: url("../fonts/fontello/font/fontello.eot?36545615#iefix") format("embedded-opentype"), url("../fonts/fontello/font/fontello.woff?36545615") format("woff"), url("../fonts/fontello/font/fontello.ttf?36545615") format("truetype"), url("../fonts/fontello/font/fontello.svg?36545615#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello/font/fontello.svg?36545615#fontello') format('svg');
+  }
+}
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000322}}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000353}}
+.icon-search:before {
+  content: '\e800';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000354}}
+.icon-ok:before {
+  content: '\e801';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000355}}
+.icon-edit:before {
+  content: '\e802';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000356}}
+.icon-right-big:before {
+  content: '\e809';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000357}}
+.icon-sort-alt-up:before {
+  content: '\e803';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000358}}
+.icon-sort-alt-down:before {
+  content: '\e804';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000359}}
+.icon-sort-name-up:before {
+  content: '\e805';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000360}}
+.icon-sort-name-down:before {
+  content: '\e806';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000361}}
+.icon-sort-number-up:before {
+  content: '\e807';
+}
+
+/* '' */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_fonts\.scss}line{font-family:\0000362}}
+.icon-sort-number-down:before {
+  content: '\e808';
+}
+
+/* '' */
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_toplevel\.scss}line{font-family:\000034}}
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -665,18 +333,6 @@ label, .label-div {
   padding-right: 0.313em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000333}}
-input.small {
-  width: 3.4em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000336}}
-input.medium {
-  width: 11em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000339}}
-input.large {
-  width: 20em;
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000342}}
 input[type='text'], input[type='date'], input[type='color'], input[type='date'], input[type='email'], input[type='password'], input[type='search'], input[type='url'], input[type='time'], input[type='number'] {
   border-radius: 3px;
@@ -684,12 +340,12 @@ input[type='text'], input[type='date'], input[type='color'], input[type='date'],
   display: inline-block;
   background-color: white;
   padding: 3.5px 0.313em;
-  min-width: 6.8rem;
+  width: 6.8rem;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000350}}
 input[type='text']:focus, input[type='date']:focus, input[type='color']:focus, input[type='date']:focus, input[type='email']:focus, input[type='password']:focus, input[type='search']:focus, input[type='url']:focus, input[type='time']:focus, input[type='number']:focus {
-  -webkit-box-shadow: inset 0 0 4px #bdcbce, 0 0 8px 1px #3498db;
-  box-shadow: inset 0 0 4px #bdcbce, 0 0 8px 1px #3498db;
+  -webkit-box-shadow: inset 0 0 4px #bdcbce, 0 0 3px 0px #3498db;
+  box-shadow: inset 0 0 4px #bdcbce, 0 0 3px 0px #3498db;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000354}}
 input[type='range'] {
@@ -715,8 +371,20 @@ input[type='submit'] {
   margin: 0.313em;
   margin-left: 0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000373}}
+input.small {
+  width: 3.4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000376}}
+input.medium {
+  width: 11em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000379}}
+input.large {
+  width: 20em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_forms\.scss}line{font-family:\0000384}}
 .input--menu {
   padding: 0 !important;
   margin: 8px;
@@ -728,60 +396,99 @@ table {
   border-collapse: collapse;
   width: auto;
   margin: auto;
+  margin-bottom: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\000038}}
 table .button {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000313}}
 tr {
   border-bottom: 1px solid #d5dde0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000316}}
 tr:last-of-type {
   border-bottom: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000319}}
 tr:hover {
-  background-color: #d5dde0;
+  background-color: #ecf0f1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000322}}
 tr.meta {
   background-color: #ecf0f1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000324}}
 tr.meta td {
   padding: 0.142rem 0.618rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000327}}
 tr.meta:hover {
   background-color: #ecf0f1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000334}}
 thead tr {
   background-color: #d5dde0;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000336}}
+thead tr:hover {
+  background-color: #d5dde0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000342}}
 th {
   padding: 0.142rem 0.618rem;
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000346}}
 th a:hover {
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000352}}
 td {
   padding: 0.618em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\000034}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000356}}
+.checked ~ td {
+  background-color: #ecf0f1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000360}}
+.total-row {
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000362}}
+.total-row:hover {
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000365}}
+.total-row td.total-cell {
+  text-align: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_table\.scss}line{font-family:\0000371}}
+.total-number {
+  border-radius: 3px;
+  display: inline-block;
+  background-color: #ecf0f1;
+  border: 1px solid #d5dde0;
+  padding: 0.125rem 0.25rem 0;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\000033}}
+.pagination {
+  margin-bottom: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\000036}}
 .pagination ul {
   margin: 0;
   padding: 0;
@@ -789,7 +496,7 @@ td {
   width: 100%;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000313}}
 .pagination li {
   border-radius: 3px;
   display: inline-block;
@@ -797,19 +504,54 @@ td {
   border: 1px solid #d5dde0;
   padding: 0.25rem 0.5rem;
   margin: 0.5rem 0.25rem 0.25rem;
+  position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000321}}
 .pagination li.active {
   background-color: transparent;
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000324}}
 .pagination li.active a {
   color: #222222;
   pointer-events: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000332}}
+li.pagination-form {
+  padding: 0;
+  vertical-align: top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000335}}
+li.pagination-form form {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000338}}
+li.pagination-form input.pagination-input {
+  margin: 0;
+  width: 4em;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000345}}
+.pagination-form:after {
+  display: inline-block;
+  color: #ecf0f1;
+  content: '\e809';
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  right: 5px;
+  top: 0.25rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/www\/pp-framework\/lib\/sass\/partials\/_pagination\.scss}line{font-family:\0000362}}
 li.pagination_number {
   margin: 0.25rem 0.06rem;
 }

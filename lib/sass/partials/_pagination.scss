@@ -1,13 +1,15 @@
 
 
 .pagination {
+	@extend .cf;
+	margin-bottom: $base-spacing-unit / 2;
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		width: 100%;
 		text-align: center;
-	}
+		}
 	li {
 		@include boradius();
 		display: inline-block;
@@ -15,6 +17,7 @@
 		border: 1px solid $midGrey;
 		padding: 0.25rem 0.5rem;
 		margin: 0.5rem 0.25rem 0.25rem;
+		position: relative;
 			&.active {
 				background-color: transparent;
 				border: none;
@@ -24,6 +27,36 @@
 					}
 			}
 	}
+}
+
+li.pagination-form {
+	padding: 0;
+	vertical-align: top;
+		form {
+			margin: 0;
+		}
+		input.pagination-input {
+			margin: 0;
+			width: 4em;
+			position: relative;
+		}
+}
+
+.pagination-form:after {
+  display: inline-block;
+	color: $lightGrey;
+	content: '\e809';
+	font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  right: 5px;
+  top: 0.25rem;
 }
 
 li.pagination_number {

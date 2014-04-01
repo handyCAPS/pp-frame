@@ -4,6 +4,7 @@ table {
 	border-collapse: collapse;
 	width: auto;
 	margin: auto;
+	margin-bottom: 1em;
 		.button {
 			vertical-align: baseline;
 		}
@@ -16,7 +17,7 @@ tr {
 			border-bottom: none;
 		}
 		&:hover {
-			background-color: $midGrey;
+			background-color: $lightGrey;
 		}
 		&.meta {
 			background-color: $lightGrey;
@@ -32,6 +33,9 @@ tr {
 thead {
 		tr {
 			background-color: $midGrey;
+				&:hover {
+					background-color: $midGrey;
+				}
 		}
 }
 
@@ -46,6 +50,31 @@ th {
 }
 
 td {
-	// border: 1px solid $hardBlue;
 	padding: 0.618em;
+}
+
+.checked ~ td {
+	background-color: $lightGrey;
+}
+
+.total-row {
+	background-color: $white;
+		&:hover {
+			background-color: $white;
+		}
+		td.total-cell {
+			// border: 1px solid $midGrey;
+			text-align: right;
+		}
+}
+
+.total-number {
+	@include boradius();
+	display: inline-block;
+	background-color: $lightGrey;
+	border: 1px solid $midGrey;
+	padding: 0.125rem 0.25rem 0;
+	font-family: $mono-font;
+	font-weight: bold;
+	margin-left: 0.5rem;
 }
